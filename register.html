@@ -38,7 +38,7 @@
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            <label for="phone">Phone Number:</label>
+            <label for="phone"> WhatsApp Number:</label>
             <input type="phone" id="phone" name="phone" required>
             <label for="course">Select Course:</label>
             <select id="course" name="course" required>
@@ -78,7 +78,7 @@
                 document.getElementById('sign-up-form').reset();
 
                 const phoneNumber = '2348127319882'; // Replace with your WhatsApp number
-                const whatsappMessage = `Hi, I have just registered for the ${course} course. My name is ${name} and my email is ${email}.`;
+                const whatsappMessage = `Hi, I have just registered for a ${course} course. My name is ${name} and my email and whatsApp number are ${email} and ${phone}.`;
                 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
                 // Log the WhatsApp URL for debugging
