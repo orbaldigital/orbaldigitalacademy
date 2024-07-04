@@ -1,0 +1,133 @@
+/* CSS for the sign-up form */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(20, 41, 58);
+    padding: 5px 10px;
+    color: white;
+}
+
+.logo img {
+    height: 100px;
+}
+nav ul {
+    list-style: none;
+    margin-right: 10px;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    padding: 3px 8px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin: 0 0 20px;
+    text-align: center;
+    color: goldenrod;
+}
+
+.sign-up {
+    padding: 2em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sign-up h2 {
+    text-align: center;
+    color: goldenrod;
+    margin-bottom: 1em;
+}
+
+#sign-up-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#sign-up-form label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+#sign-up-form input[type="text"],
+#sign-up-form input[type="email"],
+#sign-up-form input[type="course"],
+#sign-up-form select[type="select"],
+#sign-up-form button[type="submit"] {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+    color: antiquewhite;
+}
+
+#sign-up-form button[type="submit"] {
+    background-color: rgb(20, 41, 58);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sign-up-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.sign-up label,
+.sign-up input,
+.sign-up select,
+.sign-up button {
+    width: 80%;
+    margin: 10px 0;
+}
+
+.sign-up input,
+.sign-up select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: gainsboro;
+}
+/* Success message style */
+.success-message {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .sign-up {
+        padding: 1em;
+    }
+
+    #sign-up-form input[type="text"],
+    #sign-up-form input[type="email"],
+    #sign-up-form button[type="submit"] {
+        width: 100%;
+    }
+}

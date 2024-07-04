@@ -1,0 +1,99 @@
+/* General styles for the blog container */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(20, 41, 58);
+    padding: 5px 10px;
+    color: white;
+}
+header h1 {
+    color: goldenrod;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 10px;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    padding: 3px 8px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Adjust spacing between blog posts */
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+.blog-post {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    box-shadow: 0 4px 8px rgba(223, 215, 215, 0.1); /* Add a subtle shadow */
+}
+
+.blog-post img {
+    width: 100%; /* Make the image fill the container width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+.blog-content {
+    padding: 15px; /* Add padding around the text content */
+    text-align: left; /* Left align text */
+}
+
+.blog-content h2 {
+    margin-top: 15px; /* Add some space above the heading */
+    font-size: 1.5em; /* Increase font size of the heading */
+}
+
+.blog-content p {
+    margin-top: 10px; /* Add some space above the paragraph */
+    line-height: 1.6; /* Increase line spacing for readability */
+    font-size: 1em; /* Adjust font size */
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Button color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.read-more:hover {
+    background-color: #0056b3; /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

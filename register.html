@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Online Training Academy</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logoa.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" onclick="loadSection('home.html')">Home</a></li>
+                <li><a href="#why">Why Choose Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+        
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li> <a href="register.html">Enroll now</a></li>
+                <li><a href="#fraq">FAQs</a></li>
+                <li><a href="#contacts">Contact Us</a></li>  
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section class="hero section">
+        <h1>Welcome to Orbal Digital Academy</h1>
+    </section>
+    <section class="sign-up">
+        <h2>Sign Up</h2>
+        <form id="sign-up-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="phone" id="phone" name="phone" required>
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="course1">Course 1</option>
+                <option value="course2">Course 2</option>
+                <option value="course3">Course 3</option>
+            </select>
+            <button type="submit">Sign in</button>
+        </form>
+    </section>
+
+    <!-- <script>
+        document.getElementById('sign-up-form').addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Check if name or email fields are empty
+            if (name === '' || email === '') {
+                alert('Please fill in all fields.');
+                event.preventDefault(); // Prevent form submission
+            } else {
+                // Optionally, you can perform additional validation here
+
+                // Display success message
+                const successMessage = "Your application has been successfully submitted. One of our team will contact you soon.";
+                document.getElementById('sign-up-form').reset(); // Reset form fields
+                event.preventDefault(); // Prevent form submission
+                displaySuccessMessage(successMessage); // Call function to display success message
+            }
+        });
+
+        // Function to display success message
+        function displaySuccessMessage(message) {
+            // Create a new element for the message
+            const successDiv = document.createElement('div');
+            successDiv.classList.add('success-message');
+            successDiv.textContent = message;
+
+            // Insert the success message before the form
+            const signUpSection = document.querySelector('.sign-up');
+            signUpSection.insertBefore(successDiv, signUpSection.firstChild);
+
+            // Remove the success message after 5 seconds (optional)
+            setTimeout(function() {
+                successDiv.remove();
+            }, 5000); // Remove after 5 seconds (5000 milliseconds)
+        }
+    </script> -->
+
+    <!--<script>
+    document.getElementById('sign-up-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const course = document.getElementById('course').value;
+
+        // Check if name or email fields are empty
+        if (name === '' || email === '') {
+            alert('Please fill in all fields.');
+            event.preventDefault(); // Prevent form submission
+        } else {
+            // Optionally, you can perform additional validation here
+
+        // Your API call logic
+        fetch('YOUR_API_GATEWAY_URL', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, course })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Your application has been successfully submitted. One of our team will contact you soon.');
+            document.getElementById('sign-up-form').reset();
+
+            // Redirect to WhatsApp
+            const phoneNumber = '08127319882'; // Replace with your WhatsApp number
+            const whatsappMessage = `Hi, I have just registered for the ${course} course. My name is ${name} and my email is ${email}.`;
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+            window.location.href = whatsappURL;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error with your submission. Please try again.');
+        });
+    }});
+
+    </script> -->
+    <script>
+    document.getElementById('sign-up-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const course = document.getElementById('course').value;
+
+        // Log form values to console for debugging
+        console.log('Form Values:', { name, email, course });
+
+        // Mocking API call with a delay
+        new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({ success: true }); // Simulate a successful response
+            }, 1000);
+        })
+        .then(data => {
+            if (data.success) {
+                alert('Your application has been successfully submitted. One of our team will contact you soon.');
+                document.getElementById('sign-up-form').reset();
+
+                const phoneNumber = 'YOUR_WHATSAPP_PHONE_NUMBER'; // Replace with your WhatsApp number
+                const whatsappMessage = `Hi, I have just registered for the ${course} course. My name is ${name} and my email is ${email}.`;
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+                // Log the WhatsApp URL for debugging
+                console.log('Redirecting to WhatsApp URL:', whatsappURL);
+
+                // Redirect to WhatsApp
+                window.location.href = whatsappURL;
+            } else {
+                alert('There was an error with your submission. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error with your submission. Please try again.');
+        });
+    });
+
+    </script>
+
+
+</body>
+</html>

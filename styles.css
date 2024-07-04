@@ -1,0 +1,319 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(20, 41, 58);
+    padding: 5px 10px;
+    color: white;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 10px;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    padding: 3px 8px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+
+.hero {
+    background-image: url('bgpics.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    color: gray;
+    background-repeat: no-repeat;
+    height: auto;
+    text-align: left;
+    padding: 50px 5px;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.022); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 0 0 20px;
+    color: gold;
+}
+
+.hero p {
+    font-size: 25px;
+    margin: 10px 0;
+    line-height: 1.6;
+    color: white;
+}
+
+section {
+    padding: 10px 5px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 5px;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.why-choose-us h2 {
+    color: goldenrod;
+}
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose-us li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.why-choose-us strong {
+    color: black;
+}
+.popular-courses .course {
+    background-color: #f4f4f4;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.popular-courses h2 {
+    color: goldenrod;
+}
+
+.popular-courses .course h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.how-it-works h2{
+    color: goldenrod;
+} 
+ 
+.how-it-works ol {
+    list-style: decimal;
+    padding-left: 5px;
+}
+
+.how-it-works li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.enroll-button {
+    display: center;
+    position: relative;
+    height: 100px;
+    left: 35%;
+    background-color: rgb(20, 41, 58);;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 200px;
+    transition: background-color 0.3s;
+}
+
+.enroll-button:hover {
+    background-color: #575757;
+}
+
+.sign-up h2{
+    color: goldenrod;
+}
+.sign-up form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.sign-up label {
+    margin: 10px 0 5px;
+}
+
+.sign-up input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.sign-up button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-up button:hover {
+    background-color: #575757;
+}
+
+.faqs h2{
+    color: goldenrod;
+}
+
+.faqs .faq {
+    margin-bottom: 20px;
+}
+
+.faqs .faq h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.contact h2{
+    color: goldenrod;
+}
+
+.contact p, .contact .social-media a {
+    font-size: 18px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #333;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #575757;
+}
+
+/*.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+float: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+.footer .social-media {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+  }
+  .footer .social-media li {
+    float: left;
+    margin: 0 20px;
+  }
+  .footer .social-media a {
+    color:  #007bff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  .footer .social-media a:hover {
+    color: #007bff;
+  } */
+
+  /*.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    display: flex;
+    float: center;
+    align-items: center;*/
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(20, 41, 58);
+        padding: 5px 10px;
+        color: white;
+    }
+  .footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .footer .social-media {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  .footer .social-media a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  .footer .social-media a:hover {
+    color: #007bff;
+  }
+  .footer .links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer .links a {
+    color: white;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+  .footer .links a:hover {
+    text-decoration: underline;
+  }

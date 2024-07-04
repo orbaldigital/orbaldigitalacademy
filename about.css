@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+header, .aboutus, .hero, footer {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(20, 41, 58);
+
+    padding: 5px 10px;
+    color: white;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 10px;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    padding: 3px 8px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.hero {
+    background-image: url('bgpics.jpg'); /* Replace with your background image path */
+    background-size: auto;
+    position: relative;
+    background-position: center;
+    color: gray;
+    background-repeat: no-repeat;
+    text-align: left;
+    padding: 70px 20px;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 0 0 20px;
+    color: gold;
+}
+
+.hero p {
+    font-size: 25px;
+    margin: 10px 0;
+    line-height: 1.6;
+    color: antiquewhite;
+}
+
+.about{
+    display: inline;
+    
+    gap: 20px; /* Adjust spacing between courses */
+    padding: 20px;
+    background-color: #f9f9f9;
+    background-size: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.about{
+    padding: 5px;
+}
+
+.about h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: goldenrod;
+}
+
+.about p {
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+    background-color: rgb(20, 41, 58);
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+.footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .header p {
+        font-size: 1.2em;
+    }
+
+    .courses {
+        flex-direction: column;
+    }
+
+    .course {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course img {
+        width: 100%;
+        height: auto;
+    }
+
+    .course-content h3 {
+        font-size: 1.5em;
+    }
+
+    .course-content p {
+        font-size: 1.1em;
+    }
+}
