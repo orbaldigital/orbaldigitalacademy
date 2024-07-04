@@ -61,10 +61,11 @@
         // Get form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
         const course = document.getElementById('course').value;
 
         // Log form values to console for debugging
-        console.log('Form Values:', { name, email, course });
+        console.log('Form Values:', { name, email, phone, course });
 
         // Mocking API call with a delay
         new Promise((resolve) => {
@@ -74,11 +75,11 @@
         })
         .then(data => {
             if (data.success) {
-                alert('Your application has been successfully submitted. You will be redirected to our WhatsApp page.');
+                alert('Your application has been successfully submitted. You will be redircted to our whatsApp page.');
                 document.getElementById('sign-up-form').reset();
 
-                const phoneNumber = '2348127319882'; // Replace with your WhatsApp number
-                const whatsappMessage = `Hi, I have just registered for a ${course} course. My name is ${name} and my email and whatsApp number are ${email} and ${phone}.`;
+                const phoneNumber = '08127319882'; // Replace with your WhatsApp number
+                const whatsappMessage = `Hi, I have just registered for the ${course} course. My name is ${name}, my email is ${email} and my WhatsApp number is ${phone}.`;
                 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
                 // Log the WhatsApp URL for debugging
@@ -95,9 +96,7 @@
             alert('There was an error with your submission. Please try again.');
         });
     });
-
     </script>
-
 
 </body>
 </html>
