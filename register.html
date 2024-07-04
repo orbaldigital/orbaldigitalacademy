@@ -53,86 +53,7 @@
             <button type="submit">Sign in</button>
         </form>
     </section>
-
-    <!-- <script>
-        document.getElementById('sign-up-form').addEventListener('submit', function(event) {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-
-            // Check if name or email fields are empty
-            if (name === '' || email === '') {
-                alert('Please fill in all fields.');
-                event.preventDefault(); // Prevent form submission
-            } else {
-                // Optionally, you can perform additional validation here
-
-                // Display success message
-                const successMessage = "Your application has been successfully submitted. One of our team will contact you soon.";
-                document.getElementById('sign-up-form').reset(); // Reset form fields
-                event.preventDefault(); // Prevent form submission
-                displaySuccessMessage(successMessage); // Call function to display success message
-            }
-        });
-
-        // Function to display success message
-        function displaySuccessMessage(message) {
-            // Create a new element for the message
-            const successDiv = document.createElement('div');
-            successDiv.classList.add('success-message');
-            successDiv.textContent = message;
-
-            // Insert the success message before the form
-            const signUpSection = document.querySelector('.sign-up');
-            signUpSection.insertBefore(successDiv, signUpSection.firstChild);
-
-            // Remove the success message after 5 seconds (optional)
-            setTimeout(function() {
-                successDiv.remove();
-            }, 5000); // Remove after 5 seconds (5000 milliseconds)
-        }
-    </script> -->
-
-    <!--<script>
-    document.getElementById('sign-up-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const course = document.getElementById('course').value;
-
-        // Check if name or email fields are empty
-        if (name === '' || email === '') {
-            alert('Please fill in all fields.');
-            event.preventDefault(); // Prevent form submission
-        } else {
-            // Optionally, you can perform additional validation here
-
-        // Your API call logic
-        fetch('YOUR_API_GATEWAY_URL', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name, email, course })
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Your application has been successfully submitted. One of our team will contact you soon.');
-            document.getElementById('sign-up-form').reset();
-
-            // Redirect to WhatsApp
-            const phoneNumber = '08127319882'; // Replace with your WhatsApp number
-            const whatsappMessage = `Hi, I have just registered for the ${course} course. My name is ${name} and my email is ${email}.`;
-            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-            window.location.href = whatsappURL;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error with your submission. Please try again.');
-        });
-    }});
-
-    </script> -->
+        
     <script>
     document.getElementById('sign-up-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -153,10 +74,10 @@
         })
         .then(data => {
             if (data.success) {
-                alert('Your application has been successfully submitted. One of our team will contact you soon.');
+                alert('Your application has been successfully submitted. You will be redirected to our WhatsApp page.');
                 document.getElementById('sign-up-form').reset();
 
-                const phoneNumber = 'YOUR_WHATSAPP_PHONE_NUMBER'; // Replace with your WhatsApp number
+                const phoneNumber = '2348127319882'; // Replace with your WhatsApp number
                 const whatsappMessage = `Hi, I have just registered for the ${course} course. My name is ${name} and my email is ${email}.`;
                 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
