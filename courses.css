@@ -9,29 +9,29 @@ body {
     font-size: 18px;
 }
 
-header, .courses, .hero, footer {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    background-color: #fff;
-    background-size: cover;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(20, 41, 58);
-
+    max-width: 95%;
+    background-color: white;
     padding: 5px 10px;
-    color: white;
+    color: gold;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-link {
+    padding: 0.5rem 1rem;
 }
 
 .logo img {
-    height: 100px;
+    height: 30%;
+    max-width: 100px;
+    padding-left: 40%;
 }
 
 nav ul {
@@ -48,7 +48,7 @@ nav ul li {
 nav ul li a {
     text-align: left;
     text-decoration: none;
-    color: white;
+    color: gold;
     padding: 3px 8px;
     transition: background-color 0.3s;
 }
@@ -56,44 +56,58 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
     border-radius: 5px;
-}
+} 
 
-.hero {
+.container-fluid {
     background-image: url('bgpics.jpg'); /* Replace with your background image path */
-    background-size: auto;
+    background-size: cover;
     position: relative;
     background-position: center;
     color: gray;
     background-repeat: no-repeat;
+    height: auto;
+    max-width: 93%;
     text-align: left;
-    padding: 70px 20px;
+    padding: 50px 5px;
 }
 
-
-.hero::before {
+.container-fluid::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.022); /* Semi-transparent overlay */
     z-index: 1;
 }
 
-.hero h1 {
+.container-fluid h1 {
     font-size: 60px;
     margin: 0 0 20px;
     color: gold;
 }
 
-.hero p {
+.container-fluid p {
     font-size: 25px;
     margin: 10px 0;
     line-height: 1.6;
-    color: antiquewhite;
+    color: white;
 }
-
+.container-fluid a {
+    display: center;
+    position: relative;
+    height: 100%;
+    left: 40%;
+    background-color: goldenrod;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 200px;
+    transition: background-color 0.3s;
+}
 
 .courses {
     display: flex;
@@ -102,9 +116,6 @@ nav ul li a:hover {
     gap: 20px;
 
 }
-
-
-
 .course {
     flex: 1 1 300px;
     flex-direction: column;
@@ -161,24 +172,25 @@ nav ul li a:hover {
     background-color: #0056b3;
   }
 
-.footer {
-    text-align: center;
-    font-size: 1.2em;
-    padding: 20px;
-    background-color: rgb(20, 41, 58);
-    color: #fff;
-    margin-top: 20px;
-    border-radius: 0 0 8px 8px;
+footer {
+    
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
 }
-
-.footer a {
-    color: #fff;
+.container .row h5{
+    color: goldenrod;
+}
+.social-icons a {
     margin: 0 10px;
+    color: #007bff;
     text-decoration: none;
 }
+.social-icons a:hover {
+    color: #acb3bb;
 
-.footer a:hover {
-    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
