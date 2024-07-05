@@ -4,70 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orbal Digital Academy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="course.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 <body>
-    <header>
+    <header class="d-flex align-items-center justify-content-between p-3">
         <div class="logo">
-            <img src="logoa.png" alt="Logo">
+            <img src="logoa.png" alt="Logo" class="img-fluid">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" onclick="loadSection('home.html')">Home</a></li>
-                <li><a href="#why">Why Choose Us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="about.html">About Us</a></li>
         
-                <li><a href="#how">How It Works</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li> <a href="register.html">Enroll now</a></li>
-                <li><a href="#fraq">FAQs</a></li>
-                <li><a href="#contacts">Contact Us</a></li>  
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" onclick="loadSection('home.html')">Home</a></li>
+                    <li class="nav-item"><a href="#why">Why Choose Us</a></li>
+                    <li class="nav-item"><a href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="#how">How It Works</a></li>
+                    <li class="nav-item"><a href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a href="register.html">Enroll now</a></li>
+                    <li class="nav-item"><a href="#fraq">FAQs</a></li>
+                    <li class="nav-item"><a href="#contacts">Contact Us</a></li>  
+                </ul>
+            </div>   
         </nav>
     </header>
 
 
-    <section class="hero section">
+    <section class="container-fluid">
         <h1>Orbal Digital Academy</h1>
         <p>Unlock Your Potentials with Our Expert-Led Live Online Courses</p>
         <p>Transform and advance Your Career with Industry-Relevant Skills</p>
         <p>At Orbal Digital Academy, we empower individuals with cutting-edge skills and knowledge in Data Science, Data Analytics, Artificial Intelligence, Web Development, and Cyber Security. We are committed to providing high-quality, accessible, and practical online education that bridges the gap between theoretical learning and real-world application.</p>
         <p>Our goal is to foster a community of lifelong learners and innovators who are equipped to tackle the challenges of tomorrow's digital landscape.</p>
+        <a href="register.html">Enroll now</a>
     </section>
-    
+
+    <section class="aboutus">
+        <h2>About Orbal Digital Academy</h2>
+        <div class="about">
+            <h3>Our Mission</h3>
+            <p>At Orbal Digital Academy, our mission is to empower individuals with cutting-edge skills and
+                knowledge in Data Science, Data Analytics, Artificial Intelligence, Web Development, and
+                Cyber Security. We are committed to providing high-quality, accessible, and practical online
+                education that bridges the gap between theoretical learning and real-world application. Our
+                goal is to foster a community of lifelong learners and innovators who are equipped to tackle
+                the challenges of tomorrow's digital landscape.</p>
+        </div>
+
+        <div class="about">
+            <h3>Our Vission</h3>
+            <p>Our vision is to take a lead in technology education globally, inspiring and nurturing the next
+                generation of tech professionals and experts. We aspire to create a transformative learning
+                environment that cultivates creativity, innovation, and excellence. By continually evolving
+                our curriculum and embracing emerging technologies, we aim to prepare our students to
+                become influential leaders and problem-solvers in the rapidly changing digital world.</p>
+        </div>
+    </section>
+
     <section class="why-choose-us" id="why">
-        <h2>Why Choose Us?</h2>
+        <h2>Why Choose Orbal Digital Academy?</h2>
         <ul>
-            <li><strong>Expert Instructors:</strong> Learn from industry leaders with years of experience.</li>
-            <li><strong>One on one interaction with your Instructors:</strong> You have 24 hour interaction with your Instructors and Facilitators.</li>
-            <li><strong>Flexible Learning:</strong> Access courses anytime, anywhere, on any device.</li>
-            <li><strong>Career Support:</strong> Get personalized career advice and job placement assistance.</li>
+            <li>Expert Instructors: Learn from industry leaders with years of experience.</li>
+            <li>One on one interaction with your Instructors: You have 24 hour interaction with your Instructors and Facilitators.</li>
+            <li>Flexible Learning: Access courses anytime, anywhere, on any device.</li>
+            <li>Career Support: Get personalized career advice and job placement assistance.</li>
         </ul>
     </section>
-    
     <section class="popular-courses">
-        <h2>Our Popular Courses</h2>
-        <div class="courses">
-            <h3>Web Development</h3>
-            <p>Master HTML, CSS, JavaScript, python, sql,and more.</p>
-            <p>Build real-world projects and a portfolio to showcase your skills.</p>
+        <h2>Popular Courses at Orbal Digital Academy</h2>
+    </section>
+    <section class="courses">
+        <div class="course">
+            <img src="frontend-framework.png" alt="Frontend Web Development"> <!-- Replace with the path to your image -->
+            <div class="course-content">
+                <h4>Frontend Web Development</h4>
+                <p>HTML5, CSS3, JavaScript, jQuery, React.js, Angular, AngularJS Vue.js, React Native, Bootstrap, Flutter, ...</p>
+            </div>
+            <a href="register.html">Register Now</a>
         </div>
-        <div class="courses">
-            <h3>Data Science, Engineering and Analytics</h3>
-            <p>Acquire mastery skills in Excel, sql, Python, R, Data Visualization, Machine Learning, Big Data Technologies and Data Engineering.</p>
-            <p>Work on real-life datasets and case studies.</p>
+
+        <div class="course">
+            <img src="back.png" alt="Backend Web Development"> <!-- Replace with the path to your image -->
+            <div class="course-content">
+                <h4>Backend Web Development</h4>
+                <p>Database architecture; HTTP/HTTPS protocols; Express.js, Node.js; MySQL/PostgreSQL; MongoDB; ...</p>    
+            </div>
+            <a href="register.html">Register Now</a>
         </div>
-        <div class="courses">
-            <h3>Cyber Security</h3>
-            <p>Learn Networking Fundamentals, Operating Systems, encryption and hashing.</p>
-            <p>Learn Network Security Tools, Web Security Fundamentals, Endpoint Security, Security Information and Event Management (SIEM).</p>
-            <p>Learn Cryptography,Identity and Access Management (IAM), Threat Intelligence and Incident Response, Ethical Hacking and Penetration Testing and lot more</p>  
+
+        <div class="course">
+            <img src="fullstack.png" alt="Fullstack Web Development"> 
+            <div class="course-content">
+                <h4>Fullstack Web Development</h4>
+                <p>Master both Frontend and Back Web Development, Build real-world projects, build portfolio and prepare for jobs.</p>
+            </div>
+            <a href="register.html">Register Now</a>
+        </div>
+
+
+        <div class="course">
+            <img src="data_sci.png" alt="Data Science and Machine Learning"> <!-- Replace with the path to your image -->
+            <div class="course-content">
+                <h4>Data Science and Engineering </h4>
+                <p>Python, R, Data Visualization, Machine Learning, Big Data Technologies, Data Engineering ....</p>
+            </div>
+            <a href="register.html">Register Now</a>
+        </div>
+
+        <div class="course">
+            <img src="Biedd.png" alt="Data Analytics and Visualization"> <!-- Replace with the path to your image -->
+            <div class="course-content">
+                <h4>Data Analytics and Visualization</h4>
+                <p>Advance features of Excel, Power BI, Tableau, Matplotlib, Seaborn, Python Dash, Plotly and Bokeh.</p>
+            </div>
+            <a href="register.html">Register Now</a>
+        </div>
+
+        <!--<div class="course">
+            <img src="dataEng.jpg" alt="Fullstack Data Science"> 
+            <div class="course-content">
+                <h3>Fullstack Data Science</h3>
+                <p>Be versatile by having mastery skillsin Data Science,Analytics, Engineeringand Visualization.</p>
+            </div>
+        </div><!-->
+
+        <div class="course">
+            <img src="cybersecurity.jpg" alt="Cyber Security"> 
+            <div class="course-content">
+                <h4>Cyber Security</h4>
+                <p>Encryption & hashing, Network & Web Security  Security tools, Cryptography, Threat Intelligence, Ethical Hacking ...</p>
+            </div>
+            <a href="register.html">Register Now</a>
         </div>
     </section>
+    
     
     
     <section class="how-it-works" id="how">
@@ -78,7 +155,7 @@
             <li><strong>Certify:</strong> Complete the course and earn a certificate.</li>
             <li><strong>Grow:</strong> Apply your new skills in the job market.</li>
         </ol>
-        <a href="register.html" class="enroll-button">Enroll Now and Start Learning!</a>     
+        <a href="register.html" class="enroll-button">Enroll Now!</a>     
     </section>
     
     <!--<section class="sign-up">
@@ -122,36 +199,55 @@
         </div>
     </section>
     
-    <!--<footer class="footer">
-        <p>© 2024 Orbal Digital Academy. All rights reserved.</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <ul class="social-media">
-            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-          </ul>
-        
-    </footer> -->
+    
 
-    <footer class="footer">
-        <div class="links">
-            <p>© 2024 Orbal Digital Academy. All rights reserved.</p>
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | 
-        </div>
-        <div class="footer-content">
-            <ul class="social-media">
-                <li><a href="https://www.facebook.com/orbaldigitalacademy" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
-        </div>
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <a href="#about-us">Click to know more about us</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:info@yourcompany.com">infodigitalacademy.com</a></li>
+                        <li><a href="tel:+1234567890">+234 812 731 988 2</a></li>
+                    </ul>
+                    <div class="social-icons mt-2">
+                        <a href="https://facebook.com/orbaldigitalacademy" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/orbaldigitalacademy" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Start Learning Toady</h5>
+                    <a href="register.html" class="button">Enroll Now!</a>
+                 
+                </div>
+                
+            </div>
         
+            <div class="text-center">
+                <span class="text-muted">© 2024 Your Company Name</span>
+            </div>
+        </div>
     </footer>
     <!-- Link to the JavaScript file -->
     <script src="reg.js"></script>
     <script src="main.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     </body>
     </html>
