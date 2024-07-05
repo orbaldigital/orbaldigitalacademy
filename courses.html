@@ -3,35 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses - Orbal Digital Academy</title>
-    <link rel="stylesheet" href="courses.css">
+    <title>Orbal Digital Academy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
-    <header>
+    <header class="d-flex align-items-center justify-content-between p-3">
         <div class="logo">
-            <img src="logoa.png" alt="Logo">
+            <img src="logoa.png" alt="Logo" class="img-fluid">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#why-choose-us">Why Choose Us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="register.html">Enroll now</a></li>
-                <li><a href="#faqs">FAQs</a></li>
-                <li><a href="#contact">Contact Us</a></li>  
-            </ul>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" onclick="loadSection('home.html')">Home</a></li>
+                    <li class="nav-item"><a href="#why">Why Choose Us</a></li>
+                    <li class="nav-item"><a href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="#how">How It Works</a></li>
+                    <li class="nav-item"><a href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a href="register.html">Enroll now</a></li>
+                    <li class="nav-item"><a href="#fraq">FAQs</a></li>
+                    <li class="nav-item"><a href="#contacts">Contact Us</a></li>  
+                </ul>
+            </div>   
         </nav>
     </header>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Our Popular Courses</h1>
-            <p>Explore our range of courses designed to help you achieve your career goals.</p>
-        </div>
-    </div>
+
+<section class="container-fluid">
+    <h1>Popular courses at Orbal Digital Academy</h1>
+    <p>Explore our range of courses designed to help you achieve your career goals.</p>
+
+    <a href="register.html">Enroll now</a>
+</section>
     
     <section class="courses">
         <div class="course">
@@ -98,12 +109,54 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <p>© 2024 Orbal Digital Academy. All rights reserved.</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <a href="#about-us">Click to know more about us</a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:info@yourcompany.com">infodigitalacademy.com</a></li>
+                        <li><a href="tel:+1234567890">+234 812 731 988 2</a></li>
+                    </ul>
+                    <div class="social-icons mt-2">
+                        <a href="https://facebook.com/orbaldigitalacademy" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/orbaldigitalacademy" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Start Learning Toady</h5>
+                    <a href="register.html" class="button">Enroll Now!</a>
+                 
+                </div>
+                
+            </div>
+        
+            <div class="text-center">
+                <span class="text-muted">© 2024 Your Company Name</span>
+            </div>
+        </div>
     </footer>
     <!-- Link to the JavaScript file -->
     <script src="reg.js"></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
 
