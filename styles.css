@@ -9,13 +9,24 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(20, 41, 58);
+    max-width: 95%;
+    background-color: white;
     padding: 5px 10px;
-    color: white;
+    color: gold;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-link {
+    padding: 0.5rem 1rem;
 }
 
 .logo img {
-    height: 100px;
+    height: 30%;
+    max-width: 100px;
+    padding-left: 40%;
 }
 
 nav ul {
@@ -32,7 +43,7 @@ nav ul li {
 nav ul li a {
     text-align: left;
     text-decoration: none;
-    color: white;
+    color: gold;
     padding: 3px 8px;
     transition: background-color 0.3s;
 }
@@ -40,10 +51,10 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
     border-radius: 5px;
-}
+} 
 
 
-.hero {
+.container-fluid {
     background-image: url('bgpics.jpg'); /* Replace with your background image path */
     background-size: cover;
     position: relative;
@@ -51,12 +62,13 @@ nav ul li a:hover {
     color: gray;
     background-repeat: no-repeat;
     height: auto;
+    max-width: 93%;
     text-align: left;
     padding: 50px 5px;
 }
 
 
-.hero::before {
+.container-fluid::before {
     content: "";
     position: absolute;
     top: 0;
@@ -67,17 +79,31 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-.hero h1 {
+.container-fluid h1 {
     font-size: 60px;
     margin: 0 0 20px;
     color: gold;
 }
 
-.hero p {
+.container-fluid p {
     font-size: 25px;
     margin: 10px 0;
     line-height: 1.6;
     color: white;
+}
+.container-fluid a {
+    display: center;
+    position: relative;
+    height: 100%;
+    left: 40%;
+    background-color: goldenrod;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 200px;
+    transition: background-color 0.3s;
 }
 
 section {
@@ -92,6 +118,35 @@ section h2 {
     margin-bottom: 10px;
     text-align: center;
     margin-top: 10px;
+    color: goldenrod;
+}
+
+.about{
+    display: inline;
+    
+    gap: 20px; /* Adjust spacing between courses */
+    padding: 20px;
+    background-color: #f9f9f9;
+    background-size: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about{
+    padding: 5px;
+}
+
+.about h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: goldenrod;
+}
+
+.about p {
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: 1.7;
 }
 
 .why-choose-us h2 {
@@ -142,58 +197,87 @@ section h2 {
 .enroll-button {
     display: center;
     position: relative;
-    height: 100px;
-    left: 35%;
+    height: 100%;
+    max-width: 20%;
     background-color: rgb(20, 41, 58);;
-    color: white;
-    padding: 20px 40px;
+    color: goldenrod;
+    padding: 10px 20px;
     font-size: 1.5em;
     text-decoration: none;
+    text-align: center;
     border-radius: 5px;
-    margin-top: 200px;
+    margin-top: 100px;
     transition: background-color 0.3s;
 }
 
-.enroll-button:hover {
-    background-color: #575757;
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+    gap: 20px;
+
 }
 
-.sign-up h2{
+.popular-courses{
     color: goldenrod;
 }
-.sign-up form {
-    display: flex;
+
+.course {
+    flex: 1 1 300px;
     flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.sign-up label {
-    margin: 10px 0 5px;
-}
-
-.sign-up input {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    gap: 5px; /* Adjust spacing between courses */
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
     border: 1px solid #ccc;
+   /* overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+
 }
 
-.sign-up button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
+.course img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+
+}
+
+.course-content {
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.course-content h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: goldenrod;
+}
+
+.course-content p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
+}
+.course a {
+    display: inline-block;
+    margin-top: 20px; /* Space between text and button */
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: black;
+    text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.sign-up button:hover {
-    background-color: #575757;
-}
+  }
+  .course a:hover {
+    background-color: #0056b3;
+  }
 
 .faqs h2{
     color: goldenrod;
@@ -231,89 +315,23 @@ section h2 {
     color: #575757;
 }
 
-/*.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-float: center;
+footer {
+    
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
 }
-
-.footer a {
-    color: white;
-    text-decoration: none;
+.container .row h5{
+    color: goldenrod;
+}
+.social-icons a {
     margin: 0 10px;
-    transition: color 0.3s;
+    color: #007bff;
+    text-decoration: none;
 }
+.social-icons a:hover {
+    color: #acb3bb;
 
-.footer a:hover {
-    color: #ccc;
 }
-.footer .social-media {
-    margin: 10px;
-    padding: 0;
-    list-style: none;
-  }
-  .footer .social-media li {
-    float: left;
-    margin: 0 20px;
-  }
-  .footer .social-media a {
-    color:  #007bff;
-    text-decoration: none;
-    font-size: 24px;
-  }
-  .footer .social-media a:hover {
-    color: #007bff;
-  } */
-
-  /*.footer {
-    background-color: #333;
-    color: white;
-    padding: 30px;
-    display: flex;
-    float: center;
-    align-items: center;*/
-
-    .footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: rgb(20, 41, 58);
-        padding: 5px 10px;
-        color: white;
-    }
-  .footer .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .footer .social-media {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 10px;
-  }
-  .footer .social-media a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 24px;
-  }
-  .footer .social-media a:hover {
-    color: #007bff;
-  }
-  .footer .links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .footer .links a {
-    color: white;
-    text-decoration: none;
-    justify-content: space-between;
-  }
-  .footer .links a:hover {
-    text-decoration: underline;
-  }
