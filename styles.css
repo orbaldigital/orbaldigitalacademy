@@ -113,7 +113,7 @@ section {
     gap: 5px;
 }
 
-section h3 {
+section h4 {
     font-size: 32px;
     margin-bottom: 10px;
     text-align: center;
@@ -137,7 +137,7 @@ section h3 {
     padding: 5px;
 }
 
-.about h4 {
+.about h5 {
     margin: 0;
     font-size: 1.2em;
     color: goldenrod;
@@ -149,7 +149,7 @@ section h3 {
     line-height: 1.7;
 }
 
-.why-choose-us h3 {
+.why-choose-us h4 {
     color: goldenrod;
 }
 .why-choose-us ul {
@@ -171,7 +171,7 @@ section h3 {
     margin-bottom: 20px;
     border-radius: 5px;
 }
-.popular-courses h3 {
+.popular-courses h4 {
     color: goldenrod;
 }
 
@@ -180,7 +180,7 @@ section h3 {
     margin: 0 0 10px;
 }
 
-.how-it-works h3 {
+.how-it-works h4 {
     color: goldenrod;
 } 
  
@@ -253,7 +253,7 @@ section h3 {
     margin-top: 10px;
 }
 
-.course-content h4 {
+.course-content h5 {
     margin: 0;
     font-size: 1.1em;
     color: goldenrod;
@@ -279,7 +279,7 @@ section h3 {
     background-color: #0056b3;
   }
 
-.faqs h3 {
+.faqs h4 {
     color: goldenrod;
 }
 
@@ -287,12 +287,12 @@ section h3 {
     margin-bottom: 20px;
 }
 
-.faqs .faq h4 {
+.faqs .faq h5 {
     font-size: 20px;
     margin: 0 0 10px;
 }
 
-.contact h3 {
+.contact h4 {
     color: goldenrod;
 }
 
