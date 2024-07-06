@@ -48,6 +48,11 @@ nav ul li a:hover {
     background-color: #575757;
     border-radius: 5px;
 } 
+.head-containr{
+    color: goldenrod;
+    text-align: center;
+}
+
 .blog-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
