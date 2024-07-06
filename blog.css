@@ -1,21 +1,28 @@
 /* General styles for the blog container */
 
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(20, 41, 58);
+    max-width: 95%;
+    background-color: white;
     padding: 5px 10px;
-    color: white;
+    color: gold;
 }
-header h1 {
-    color: goldenrod;
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-link {
+    padding: 0.5rem 1rem;
 }
 
 .logo img {
     height: 40%;
     max-width: 150px;
-    padding-left: 40%
+    padding-left: 40%;
 }
 
 nav ul {
@@ -32,7 +39,7 @@ nav ul li {
 nav ul li a {
     text-align: left;
     text-decoration: none;
-    color: white;
+    color: gold;
     padding: 3px 8px;
     transition: background-color 0.3s;
 }
@@ -40,7 +47,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
     border-radius: 5px;
-}
+} 
 .blog-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
@@ -99,3 +106,22 @@ nav ul li a:hover {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
+
+footer {
+    
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+}
+.container .row h5{
+    color: goldenrod;
+}
+.social-icons a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    color: #acb3bb;
