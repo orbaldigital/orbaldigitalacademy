@@ -13,7 +13,9 @@ header h1 {
 }
 
 .logo img {
-    height: 100px;
+    height: 40%;
+    max-width: 150px;
+    padding-left: 40%
 }
 
 nav ul {
