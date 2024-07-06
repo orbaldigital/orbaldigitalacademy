@@ -38,7 +38,7 @@
 
 
     <section class="container-fluid">
-        <h2 class="display-5">Welcome to Orbal Digital Academy</h2>
+        <h2 id="heading">Welcome to Orbal Digital Academy</h2>
         <p>Unlock Your Potentials with Our Expert-Led Online Courses</p>
         <p>Transform and advance Your Career with Industry-Relevant Skills</p>
         <p>Our Courses are designed for both beginners, inter-mediate and advance learners</p>
@@ -228,6 +228,13 @@
     <!-- Link to the JavaScript file -->
     <script src="reg.js"></script>
     <script src="main.js"></script>
+    <script>
+        const heading = document.getElementById('heading');
+        if (window.innerWidth < 480) {
+            heading.textContent = "Short heading";
+        }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
