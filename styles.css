@@ -21,6 +21,7 @@ header {
 }
 .nav-link {
     padding: 0.5rem 1rem;
+    transition: color 0.5s;
 }
 
 .logo img {
@@ -51,6 +52,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
     border-radius: 5px;
+    color: white;
 } 
 
 
