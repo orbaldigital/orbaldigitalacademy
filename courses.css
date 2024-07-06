@@ -82,7 +82,7 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-.container-fluid h1 {
+.container-fluid h3 {
     font-size: 60px;
     margin: 0 0 20px;
     color: gold;
