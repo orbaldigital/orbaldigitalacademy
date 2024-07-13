@@ -122,8 +122,8 @@ nav ul li a:hover {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    color: goldenrod;
     background-color: white;
+    color:goldenrod;
 }
 /* Success message style */
 .success-message {
