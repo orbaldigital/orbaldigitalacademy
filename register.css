@@ -49,14 +49,14 @@ nav ul li a:hover {
     color: white;
 } 
 
-.hero h1 {
+.hero section h1 {
     font-size: 50px;
     margin: 0 0 20px;
     text-align: center;
     color: goldenrod;
 }
 
-.sign-up {
+.registration-form {
 
     padding: 2em;
     background-color: gray;
@@ -72,13 +72,13 @@ nav ul li a:hover {
     margin-bottom: 1em;
 }
 
-#sign-up-form {
+#form-group {
     display: flex;
     flex-direction: column;
     
 }
 
-#sign-up-form label {
+#form-group label {
     font-weight: bold;
     margin-bottom: 0.5em;
     color: black;
@@ -97,7 +97,7 @@ nav ul li a:hover {
     color: black;
 }
 
-#sign-up-form button[type="submit"] {
+#form-group[type="submit"] {
     background-color: rgb(20, 41, 58);
     color: #fff;
     border: none;
@@ -105,7 +105,7 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
-#sign-up-form button[type="submit"]:hover {
+#form-group button[type="submit"]:hover {
     background-color: #45a049;
 }
 
@@ -117,8 +117,8 @@ nav ul li a:hover {
     margin: 10px 0;
 }
 
-.sign-up input,
-.sign-up select {
+.form-group input,
+.form-group select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
