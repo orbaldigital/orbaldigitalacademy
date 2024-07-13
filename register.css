@@ -1,17 +1,29 @@
 /* CSS for the sign-up form */
-
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #F98866;
+    max-width: 95%;
+    background-color: white;
     padding: 5px 10px;
-    color: white;
+    color: gold;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-link {
+    padding: 0.5rem 1rem;
+    transition: color 0.5s;
 }
 
 .logo img {
-    height: 100px;
+    height: 40%;
+    max-width: 150px;
+    padding-left: 40%;
 }
+
 nav ul {
     list-style: none;
     margin-right: 10px;
@@ -26,7 +38,7 @@ nav ul li {
 nav ul li a {
     text-align: left;
     text-decoration: none;
-    color: white;
+    color: gold;
     padding: 3px 8px;
     transition: background-color 0.3s;
 }
@@ -34,7 +46,8 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
     border-radius: 5px;
-}
+    color: white;
+} 
 
 .hero h1 {
     font-size: 50px;
@@ -133,4 +146,25 @@ nav ul li a:hover {
     #sign-up-form button[type="submit"] {
         width: 100%;
     }
+}
+
+footer {
+    
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+}
+.container .row h5{
+    color: goldenrod;
+}
+.social-icons a {
+    margin: 0 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    color: #acb3bb;
+
 }
