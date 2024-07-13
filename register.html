@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="course.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    
 </head>
 <body>
     <header class="d-flex align-items-center justify-content-between p-3">
         <div class="logo">
             <img src="nlogo.png" alt="Logo" class="img-fluid">
         </div>
-        
+            
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,31 +35,48 @@
             </div>   
         </nav>
     </header>
-
-
+    
+    
     <section class="hero section">
         <h1>Welcome to Orbal Digital Academy</h1>
     </section>
-   <section class="sign-up">
+    <section class="registration-form">
         <h2>Sign Up</h2>
-        <form id="sign-up-form">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="phone">Phone Number:</label>
-            <input type="phone" id="phone" name="phone" required>
-            <label for="course">Select Course:</label>
-            <select id="course" name="course" required>
-                <option value="" disabled selected>Select a course</option>
-                <option value="Data Science">Data Science</option>
-                <option value="Data Analytics">Data Analytics</option>
-                <option value="Frontend Web Developmen">Frontend Web Development</option>
-                <option value="Backend Web Developmen">Backend Web Development</option>
-                <option value="Fullstack Web Development">Fullstack Web Development</option>
-                <option value="Cyber Security">Cyber Security</option>
-            </select>
-            <button type="submit">Sign in</button>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="phone" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="" disabled selected>Select a course</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="Frontend Web Developmen">Frontend Web Development</option>
+                    <option value="Backend Web Developmen">Backend Web Development</option>
+                    <option value="Fullstack Web Development">Fullstack Web Development</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
         </form>
     </section>
     <footer class="footer bg-dark">
@@ -104,14 +121,22 @@
         </div>
     </footer>    
     <script>
-    document.getElementById('sign-up-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+        document.getElementById('sign-up-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
 
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const course = document.getElementById('course').value;
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const course = document.getElementById('course').value;
+            // Send data to the server
+            fetch('http://localhost:3000/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, phone, password, course })
+            })
 
         // Log form values to console for debugging
         console.log('Form Values:', { name, email, phone, course });
@@ -125,7 +150,7 @@
         .then(data => {
             if (data.success) {
                 alert('Your application has been successfully submitted. You will be redircted to our whatsApp page.');
-                document.getElementById('sign-up-form').reset();
+                document.getElementById('registrationForm').reset();
 
                 const phoneNumber = '08127319882'; // Replace with your WhatsApp number
                 const whatsappMessage = `Hi, I have just registered for the ${course} course. My name is ${name}, my email is ${email} and my WhatsApp number is ${phone}.`;
@@ -145,7 +170,9 @@
             alert('There was an error with your submission. Please try again.');
         });
     });
+
     </script>
+
 
 </body>
 </html>
