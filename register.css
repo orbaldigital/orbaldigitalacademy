@@ -1,4 +1,6 @@
 /* CSS for the sign-up form */
+
+
 header {
     display: flex;
     align-items: center;
@@ -16,6 +18,7 @@ header {
 .nav-link {
     padding: 0.5rem 1rem;
     transition: color 0.5s;
+    
 }
 
 .logo img {
@@ -49,14 +52,15 @@ nav ul li a:hover {
     color: white;
 } 
 
-.hero section h1 {
+
+.hero h1 {
     font-size: 50px;
     margin: 0 0 20px;
     text-align: center;
     color: goldenrod;
 }
 
-.registration-form {
+.sign-up {
 
     padding: 2em;
     background-color: gray;
@@ -72,13 +76,13 @@ nav ul li a:hover {
     margin-bottom: 1em;
 }
 
-#form-group {
+#sign-up-form {
     display: flex;
     flex-direction: column;
     
 }
 
-#form-group label {
+#sign-up-form label {
     font-weight: bold;
     margin-bottom: 0.5em;
     color: black;
@@ -97,7 +101,7 @@ nav ul li a:hover {
     color: black;
 }
 
-#form-group[type="submit"] {
+#sign-up-form button[type="submit"] {
     background-color: rgb(20, 41, 58);
     color: #fff;
     border: none;
@@ -105,7 +109,7 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
-#form-group button[type="submit"]:hover {
+#sign-up-form button[type="submit"]:hover {
     background-color: #45a049;
 }
 
@@ -117,8 +121,8 @@ nav ul li a:hover {
     margin: 10px 0;
 }
 
-.form-group input,
-.form-group select {
+.sign-up input,
+.sign-up select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
