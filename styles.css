@@ -1,339 +1,145 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ==========================
+   MOBILE RESPONSIVE STYLES
+   ========================== */
+@media screen and (max-width: 768px) {
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 95%;
-    background-color: white;
-    padding: 5px 10px;
-    color: gold;
-}
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%;
+        padding: 10px;
+    }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.nav-link {
-    padding: 0.5rem 1rem;
-    transition: color 0.5s;
-}
+    .logo img {
+        max-width: 120px;
+        padding-left: 0;
+        margin: auto;
+        display: block;
+    }
 
-.logo img {
-    height: 40%;
-    max-width: 150px;
-    padding-left: 40%;
-}
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
 
-nav ul {
-    list-style: none;
-    margin-right: 10px;
-    padding: 0;
-    display: flex;
-}
+    nav ul li {
+        margin: 8px 0;
+    }
 
-nav ul li {
-    margin-left: 20px;
-}
+    /* Hero Section */
+    .container-fluid {
+        max-width: 100%;
+        padding: 40px 15px;
+        text-align: center;
+    }
 
-nav ul li a {
-    text-align: left;
-    text-decoration: none;
-    color: gold;
-    padding: 3px 8px;
-    transition: background-color 0.3s;
-}
+    .container-fluid h3 {
+        font-size: 2rem;
+    }
 
-nav ul li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-    color: white;
-} 
+    .container-fluid p {
+        font-size: 1rem;
+    }
 
+    .container-fluid a {
+        display: inline-block;
+        position: static;
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
 
-.container-fluid {
-    background-image: url('bgpics.jpg'); /* Replace with your background image path */
-    background-size: cover;
-    position: relative;
-    background-position: center;
-    color: gray;
-    background-repeat: no-repeat;
-    height: auto;
-    max-width: 93%;
-    text-align: left;
-    padding: 50px 5px;
-}
+    /* Sections */
+    section {
+        padding: 15px;
+    }
 
+    section h4 {
+        font-size: 1.8rem;
+    }
 
-.container-fluid::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.022); /* Semi-transparent overlay */
-    z-index: 1;
-}
+    /* About */
+    .about {
+        padding: 15px;
+    }
 
-.container-fluid h3 {
-    font-size: 60px;
-    margin: 0 0 20px;
-    color: gold;
-}
+    .about h5 {
+        font-size: 1.1rem;
+    }
 
-.container-fluid p {
-    font-size: 25px;
-    margin: 10px 0;
-    line-height: 1.6;
-    color: white;
-}
-.container-fluid a {
-    display: center;
-    position: relative;
-    height: 100%;
-    left: 40%;
-    background-color: goldenrod;
-    color: white;
-    padding: 20px 40px;
-    font-size: 1.5em;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 200px;
-    transition: background-color 0.3s;
-}
+    .about p {
+        font-size: 0.95rem;
+    }
 
-section {
-    padding: 10px 5px;
-    max-width: 1200px;
-    margin: auto;
-    gap: 5px;
-}
+    /* Lists */
+    .why-choose-us li,
+    .how-it-works li {
+        font-size: 1rem;
+    }
 
-section h4 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    text-align: center;
-    margin-top: 10px;
-    color: goldenrod;
-}
+    /* Enroll Button */
+    .enroll-button {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        font-size: 1rem;
+        padding: 12px;
+    }
 
-.about {
-    display: inline;
-    
-    gap: 20px; /* Adjust spacing between courses */
-    padding: 20px;
-    background-color: #f9f9f9;
-    background-size: auto;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    /* Courses */
+    .courses {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-.about{
-    padding: 5px;
-}
+    .course {
+        flex: 1 1 100%;
+    }
 
-.about h5 {
-    margin: 0;
-    font-size: 1.2em;
-    color: goldenrod;
-}
+    .course img {
+        height: auto;
+        max-height: 250px;
+    }
 
-.about p {
-    margin: 10px 0;
-    font-size: 1em;
-    line-height: 1.7;
-}
+    .course-content h5 {
+        font-size: 1rem;
+    }
 
-.why-choose-us h4 {
-    color: goldenrod;
-}
-.why-choose-us ul {
-    list-style: square;
-    padding: 0;
-}
+    .course-content p {
+        font-size: 0.95rem;
+    }
 
-.why-choose-us li {
-    font-size: 18px;
-    margin: 10px 0;
-}
+    .course a {
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-.why-choose-us strong {
-    color: black;
-}
-.popular-courses .course {
-    background-color: #f4f4f4;
-    padding: 5px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-.popular-courses h4 {
-    color: goldenrod;
-}
+    /* FAQs */
+    .faqs .faq h6 {
+        font-size: 1rem;
+    }
 
-.popular-courses .course h5 {
-    font-size: 24px;
-    margin: 0 0 10px;
-}
+    /* Contact */
+    .contact p,
+    .contact .social-media a {
+        font-size: 1rem;
+    }
 
-.how-it-works h4 {
-    color: goldenrod;
-} 
- 
-.how-it-works ul {
-    list-style: square;
-    padding-left: 5px;
-}
+    .social-media {
+        text-align: center;
+    }
 
-.how-it-works li {
-    font-size: 18px;
-    margin: 10px 0;
-}
+    .social-media a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
 
-.enroll-button {
-    display: center;
-    position: relative;
-    height: 100%;
-    max-width: 20%;
-    background-color: rgb(20, 41, 58);;
-    color: goldenrod;
-    padding: 10px 20px;
-    font-size: 1.5em;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 100px;
-    transition: background-color 0.3s;
-}
-
-
-.courses {
-    display: flex;
-    flex-wrap: wrap;
-    /*flex-direction: column;*/
-    gap: 20px;
-
-}
-
-.popular-courses{
-    color: goldenrod;
-}
-
-.course {
-    flex: 1 1 300px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 5px; /* Adjust spacing between courses */
-    padding: 5px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-   /* overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-
-}
-
-.course img {
-    max-width: 100%;
-    height: 300px;
-    object-fit: cover;
-    margin: auto;
-    display: block;
-
-}
-
-.course-content {
-    padding: 5px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.course-content h5 {
-    margin: 0;
-    font-size: 1.1em;
-    color: goldenrod;
-}
-
-.course-content p {
-    margin: 10px 0;
-    text-align: center;
-    font-size: 1em;
-    line-height: 1.5;
-}
-.course a {
-    display: inline-block;
-    margin-top: 20px; /* Space between text and button */
-    padding: 10px 20px;
-    background-color: goldenrod;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .course a:hover {
-    background-color: #0056b3;
-  }
-
-.faqs h4 {
-    color: goldenrod;
-}
-
-.faqs .faq {
-    margin-bottom: 20px;
-}
-
-.faqs .faq h6 {
-    font-size: 20px;
-    margin: 0 0 10px;
-}
-
-.contact h4 {
-    color: goldenrod;
-}
-
-.contact p, .contact .social-media a {
-    font-size: 18px;
-}
-
-.social-media {
-    margin-top: 20px;
-}
-
-.social-media a {
-    color: #333;
-    margin-right: 20px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-media a:hover {
-    color: #575757;
-}
-
-footer {
-    
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: left;
-}
-.container .row h5{
-    color: goldenrod;
-}
-.social-icons a {
-    margin: 0 10px;
-    color: #007bff;
-    text-decoration: none;
-}
-.social-icons a:hover {
-    color: #acb3bb;
-
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 15px;
+    }
 }
